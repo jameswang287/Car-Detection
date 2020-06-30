@@ -19,6 +19,13 @@ The dataset, https://ai.stanford.edu/~jkrause/cars/car_dataset.html, consists of
 
 The data is labeled by a series of matlab files with the coordinates for a bounding box, its corresponding class number, and filename. The coordinates for the bounding box for each image in pixels are important as some images are car dealer advertisements with extraneous elements in the image such as dealer logos and other advertising elements and watermarks.
 
+![crop](https://people.ucsc.edu/~jwang402/page_resources/img/crop.png)
+
+The retrained resnet 34 model achieves an accuracy of over 80%. The nn takes an image input and passes it through a convolution and pooling layer. The image input is first transformed to a perfect square and are all randomly rotated, flipped and shuffled. The image is then passed into 34 additional layers of similar convolution. Each layer performs a 3x3 convolution with a fixed feature dimension map of values ranging from 64, 128, 256, and 512. The algorithm uses skip connection to bypass the input every 2 convolutions. The general idea behind skip connection is that it adds the output from an earlier layer to a later layer which helps to mitigate the vanishing gradient problem by allowing an alternate shortcut path for the gradient to flow through. All of this also helps the network perform better by allowing the model to learn an identity function which will ensure that the higher layer will perform at least as good as the lower layers and not any worse. We trained the model based on the cropped images provided by our bounding box and utilized GPU hardware (NVIDIA CUDA) for the training.
+
+![crop](https://people.ucsc.edu/~jwang402/page_resources/img/rolls.png)
+
+
 #### References
 Jonathan Krause, Michael Stark, Jia Deng, and Li Fei-Fei. 2013. 3D Object Representations for Fine-Grained Categorization. 4th IEEE Workshop on 3D Representation and Recognition, at ICCV 2013 (3dRR-13). Sydney, Australia.
 
