@@ -14,7 +14,7 @@ The program will then preprocess all data by data in the labels; retraining of t
 
 The model will be loaded for testing, where the the cell will randomly choose a test image to test.
 
-#### General Documentation
+#### General Info
 The dataset, https://ai.stanford.edu/~jkrause/cars/car_dataset.html, consists of 16,185 images of cars divided into 196 classes. 8,144 of the images are training images and 8,041 are testing images. Each class is a specific year, make, and model of a car; each of these classes is mapped to a numerical value spanning from 1 to 196. Each numerical class value is mapped to a string in the format [Make Model Year] i.e.: Hyundai Sonata 2012.
 
 The data is labeled by a series of matlab files with the coordinates for a bounding box, its corresponding class number, and filename. The coordinates for the bounding box for each image in pixels are important as some images are car dealer advertisements with extraneous elements in the image such as dealer logos and other advertising elements and watermarks.
