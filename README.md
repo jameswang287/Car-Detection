@@ -1,3 +1,5 @@
+Code hosted: https://people.ucsc.edu/~jwang402/car_det/
+
 # Car Detection with Pytorch/Resnet34
 ---
 ![cardet](https://people.ucsc.edu/~jwang402/page_resources/img/car_det.png)
